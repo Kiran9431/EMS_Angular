@@ -1,0 +1,29 @@
+<div *ngIf="employees" class="container emp-table">
+  <div class="headers">
+    <h1 class="table-title">Employees</h1>
+    <button class="btn">Add Employees</button>
+
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Emp Name</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Phone number</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let employee of employees">
+        <td>{{employee.empname}}</td>
+        <td>{{employee.department}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.phonenumber}}</td>
+        <td><button class="btn btn-primary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
